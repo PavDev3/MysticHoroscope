@@ -3,17 +3,17 @@
 
     <item
         android:id="@+id/listFragment"
-        android:icon="@drawable/ic_list_icon"
+        android:icon="@drawable/horoscope"
         android:title="@string/list"/>
 
     <item
         android:id="@+id/infoFragment"
-        android:icon="@drawable/ic_info_icon"
+        android:icon="@drawable/star"
         android:title="@string/info"/>
 
     <item
         android:id="@+id/compatibilityFragment"
-        android:icon="@drawable/ic_compatibility_icon"
+        android:icon="@drawable/celtic"
         android:title="@string/compatibility"/>
 
 
