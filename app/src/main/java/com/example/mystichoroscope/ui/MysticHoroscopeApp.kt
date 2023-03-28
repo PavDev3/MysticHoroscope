@@ -1,3 +1,7 @@
 package com.example.mystichoroscope.ui
 
-class MysticHoroscopeApp()
+import android.app.Application
+import dagger.hilt.android.HiltAndroidApp
+
+@HiltAndroidApp
+class MysticHoroscopeApp:Application()
