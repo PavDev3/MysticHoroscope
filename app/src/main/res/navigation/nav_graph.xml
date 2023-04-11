@@ -12,7 +12,7 @@
         tools:layout="@layout/fragment_info" />
     <fragment
         android:id="@+id/compatibilityFragment"
-        android:name="com.example.mystichoroscope.ui.compatibility.CompatibilityFragment"
+        android:name="com.example.mystichoroscope.ui.lucky.LuckyFragment"
         android:label="fragment_compatibility"
         tools:layout="@layout/fragment_compatibility" />
     <fragment

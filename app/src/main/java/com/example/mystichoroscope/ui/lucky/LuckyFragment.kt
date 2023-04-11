@@ -1,4 +1,4 @@
-package com.example.mystichoroscope.ui.compatibility
+package com.example.mystichoroscope.ui.lucky
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -11,9 +11,9 @@ import dagger.hilt.android.AndroidEntryPoint
 
 
 @AndroidEntryPoint
-class CompatibilityFragment : Fragment() {
+class LuckyFragment : Fragment() {
 
-    private val viewModel by viewModels<CompatibilityViewModel>()
+    private val viewModel by viewModels<LuckyViewModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
