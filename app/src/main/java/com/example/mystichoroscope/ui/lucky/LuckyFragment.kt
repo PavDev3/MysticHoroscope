@@ -15,11 +15,16 @@ class LuckyFragment : Fragment() {
 
     private val viewModel by viewModels<LuckyViewModel>()
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_compatibility, container, false)
+        return inflater.inflate(R.layout.fragment_lucky, container, false)
     }
 }
