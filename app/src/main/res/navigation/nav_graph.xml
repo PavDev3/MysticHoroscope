@@ -14,7 +14,7 @@
         android:id="@+id/compatibilityFragment"
         android:name="com.example.mystichoroscope.ui.lucky.LuckyFragment"
         android:label="fragment_compatibility"
-        tools:layout="@layout/fragment_compatibility" />
+        tools:layout="@layout/fragment_lucky" />
     <fragment
         android:id="@+id/listFragment"
         android:name="com.example.mystichoroscope.ui.list.ListFragment"

@@ -14,7 +14,7 @@
     <item
         android:id="@+id/compatibilityFragment"
         android:icon="@drawable/celtic"
-        android:title="@string/compatibility"/>
+        android:title="@string/Lucky"/>
 
 
 </menu>
