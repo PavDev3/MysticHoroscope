@@ -16,6 +16,7 @@ import com.example.mystichoroscope.R
 import com.example.mystichoroscope.databinding.FragmentLuckyBinding
 import dagger.hilt.android.AndroidEntryPoint
 import java.lang.Exception
+import javax.inject.Inject
 import kotlin.random.Random
 
 
@@ -25,6 +26,9 @@ class LuckyFragment : Fragment() {
     private val viewModel by viewModels<LuckyViewModel>()
     private var _binding: FragmentLuckyBinding? = null
     private val binding get() = _binding!!
+
+    @Inject
+    lateinit var randomCardProvider:RandomCardProvider
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -78,23 +82,16 @@ class LuckyFragment : Fragment() {
     }
 
     private fun prepareCard() {
-
-        val image = when (Random.nextInt(0, 5)) {
-            0 -> R.drawable.card_ace_pentacles
-            1 -> R.drawable.card_chariot
-            2 -> R.drawable.card_death
-            3 -> R.drawable.card_devil
-            4 -> R.drawable.card_empress
-            5 -> R.drawable.card_fool
-            else -> R.drawable.card_back
-        }
+        val luck = randomCardProvider.getLucky()
 
         binding.viewFrontContainer.ivLuckyCard.setImageDrawable(
             ContextCompat.getDrawable(
                 requireContext(),
-                image
+                luck.image
             )
         )
+
+        binding.tvLuckyInfo.text = getString(luck.text)
     }
 
     override fun onCreateView(
